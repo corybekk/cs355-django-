@@ -1,0 +1,43 @@
+USE majorLeagueBaseball;
+
+LOCK TABLES stadium WRITE;
+
+SET foreign_key_checks = 0;
+
+INSERT INTO stadium VALUES
+('24 Willie Mays Plaza San Francisco, CA', 'AT&T Park', '41503', '0'),
+('1000 Elysian Park Ave Los Angeles, CA', 'Dodger Stadium', '56000', '0'),
+('401 East Jefferson Street Phoenix, AZ', 'Chase Field', '48633', '1'),
+('100 Park Blvd San Diego, CA', 'PetCo Park', '50000', '0'),
+('2001 Blake Stree Denver, CO', 'Coors Field', '70000', '0'),
+('100 Joe Nuxhall Way Cincinnati, OH', 'Great American Ball Park', '42271', '0'),
+('700 Clark Street St. Louis, MO', 'Busch Stadium', '46000', '0'),
+('1 Brewers Way Milwaukee, WI', 'Miller Park', '41900', '1'),
+('115 Federal Street Pittsburgh, PA', 'PNC Park', '38362', '0'),
+('1060 West Addison Ave Chicago, IL', 'Wrigley Field', '41160', '0'),
+('501 Crawford Street Houston, TX', 'Minute Maid Park', '40963', '1'),
+('1500 South Capitol Street SE Washington, D.C', 'Nationals Park', '41546', '0'),
+('755 Hank Aaron Drive SE Atlanta, GA', 'Turner Field', '50,096', '0'),
+('1 Citizens Bank Way Philadelphia, PA', 'Citizens Bank Park', '43647', '0'),
+('123 Roosevelt Ave New York, NY', 'Citi Field', '41800', '0'),
+('501 Marlins Way Miami, FL', 'Marlins Park', '37000', '1'),
+('1000 Ballpark Way Arlington, TX', 'Rangers Ballpark in Arlington', '49115', '0'),
+('2000 E Gene Autry Way Anaheim, CA', 'Angel Stadium of Anaheim', '45050', '0'),
+('1250 1st Ave S Seattle, WA', 'Safeco Field', '54097', '1'),
+('2100 Woodward Detroit, MI', 'Comerica Park', '47782', '0'),
+('333 W 35th Street Chicago, IL', 'US Cellular Field', '40615', '0'),
+('1 Royal Way Kansas City, MO', 'Kauffman Stadium', '27000', '0'),
+('2401 Ontario Street Cleveland, OH', 'Progressive Field', '43345', '0'),
+('1 Twins Way Minneapolis, MN', 'Target Field', '39504', '0'),
+('1 East 161 Street Bronx, NY', 'Yankee Stadium', '50291', '0'),
+('1 W Lee Street Baltimore, MD', 'Camden Yards', '45971', '0'),
+('1 Tropicana Drive St. Petersburg, FL', 'Tropicana Field', '40473', '1'),
+('1 Blue Jays Way Toronto, ON', 'Rogers Centre', '54000', '1'),
+('4 Yawkey Way Boston, MA', 'Fenway Park', '37400', '0'), 
+('1800 Tulare Street Fresno, CA', 'Chukchansi Park', '12500', '0'),
+('400 Ballpark Drive West Sacramento, CA', 'Raley Field', '14014', '0'),
+('7000 Coliseum Way Oakland, CA', 'O.co Coliseum', '35067', '0'),
+('850 Las Vegas Blvd North, Las Vegas, NV', 'Cashman Field', '9334', '0'); 
+SET foreign_key_checks = 1;
+
+UNLOCK TABLES;

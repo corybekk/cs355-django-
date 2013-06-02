@@ -1,0 +1,32 @@
+kirby.cs.sonoma.edu:8007/admin     "check urls.py"
+
+-admin.py  "used to make columns on the webpage"
+-views.py  information that you and the user can interact with but it does not save it to the database
+-models.py  where you define each entity of the database
+-template.html uses the functions in views.py to create the actual html interface on the webpage
+The code inside the template is html code that organizes the data on the page
+
+ mysql -p -u cbekker < department.sql "import the department table data into the django page"
+
+python manage.py sql code1
+
+python manage.py runserver 0.0.0.0:80007
+
+
+log into mysql    mysql -p -u cbekker
+
+use databasename
+show tables
+describe table
+
+1)in Settings.py  I need to change to the name from cbekker_django to a different name. The name is the
+name of the database you are using. You can check what databases you have in mysql by logging in
+mysql -u cbekker -p
+
+2)kooshes said to make a new database for project 2. Analysis: when we sync a database to the django
+project it creates the tables? correct? well if we use the old database and we sync it, then it
+will mess up the primary keys and references because django does it differently? or names it differemtly?
+
+3)forms- to create a form you need to create a template "html file" that gives
+the visual  layout of the form. You have to make a view. you have to also
+have to change the urls.

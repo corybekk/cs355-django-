@@ -1,0 +1,229 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<html lang="en">
+<head>
+    <title>Update Player</title>
+</head>
+<body background ="http://luxehdwallpaper.com/wallpaper/2012/11/star-wars-1680x1050-hd-wallpaper.jpg">
+
+<h3> <a href="http://fontmeme.com/star-wars-font/"><img src="http://fontmeme.com/create.php?text=MLB%20Wiki&name=Star_Jedi_Rounded.ttf&size=35&style_color=B32D24" alt="Star Wars Font" title="FontMeme.com" /></a><h3>
+
+<h3> Update a player </h3>
+<!-------------UPDATE PERSONAL INFO TABLE------------------------------>
+<br><font size = "3" face="aharoni" color="003399">Personal Info</font>
+<table width="780px" border ="3" cellspacing ="2" cellpadding ="1" bgcolor="#66CCCC">
+	{{player}}
+	<tr>
+	<td width="80px"><strong> name </td>
+	<td width="50px"><strong> height </td>
+	<td width="50px"><strong> weight </td>
+	<td width="100px"><strong> birthDay </td>
+	<td width="50px"><strong> position </td>
+	<td width="50px"><strong> team </td> 
+	<td width="50px"><strong> id </td> 
+	</tr>
+		
+	<tr><form action="UpdatePlayer.html" method="post">{% csrf_token %}
+	<td width="100px"><input type=text name="name" value = "{{player.pname}}"></td>
+	<td><select name="height">
+	<option value ="{{player.height}}">{{player.height}}</option>
+	<option value ="5-3">5-3 ft</option>
+	<option value ="5-4">5-4 ft</option>
+	<option value ="5-5">5-5 ft</option>
+	<option value ="5-6">5-6 ft</option>
+	<option value ="5-7">5-7 ft</option>
+	<option value ="5-8">5-8 ft</option>
+	<option value ="5-9">5-9 ft</option>
+	<option value ="5-10">5-10 ft</option>
+	<option value ="5-11">5-11 ft</option>
+	<option value ="6-0">6-0 ft</option>
+	<option value ="6-1">6-1 ft</option>
+	<option value ="6-2">6-2 ft</option>
+	<option value ="6-3">6-3 ft</option>
+	<option value ="6-4">6-4 ft</option>
+	<option value ="6-5">6-5 ft</option>
+	<option value ="6-6">6-6 ft</option>
+	<option value ="6-7">6-7 ft</option>
+</select></td>
+<td><select name="weight">
+	<option value ="{{player.weight}}">{{player.weight}} lbs</option> 
+	<option value ="105">105 lbs</option> 
+	<option value ="110">110 lbs</option> 
+	<option value ="115">115 lbs</option> 
+	<option value ="120">120 lbs</option> 
+	<option value ="125">125 lbs</option> 
+	<option value ="130">130 lbs</option> 
+	<option value ="135">135 lbs</option> 
+	<option value ="140">140 lbs</option> 
+	<option value ="145">145 lbs</option> 
+	<option value ="150">150 lbs</option> 
+	<option value ="160">160 lbs</option> 
+	<option value ="165">165 lbs</option> 
+	<option value ="170">170 lbs</option> 
+	<option value ="175">175 lbs</option> 
+	<option value ="180">180 lbs</option> 
+	<option value ="185">185 lbs</option> 
+	<option value ="190">190 lbs</option> 
+	<option value ="195">195 lbs</option> 
+	<option value ="200">200 lbs</option> 
+	<option value ="205">205 lbs</option> 
+	<option value ="210">210 lbs</option> 
+	<option value ="215">215 lbs</option> 
+	<option value ="220">220 lbs</option> 
+	<option value ="225">225 lbs</option> 
+	<option value ="230">230 lbs</option> 
+</select></td>
+	<td width="100px"><div title = "are you crazy? you can't change when you're born!"> <input type=hidden name="birthday" value = "{{player.birthDay}}">"{{player.birthDay}}"</td>
+<td><select name="position"> 
+	<option value ="{{player.pposition}}">{{player.pposition}}</option> 
+	<option value ="LHP">LHP</option> 
+	<option value ="RHP">RHP</option> 
+	<option value ="1B">1B</option> 
+	<option value ="2B">2B</option> 
+	<option value ="3B">3B</option> 
+	<option value ="SS">SS</option> 
+	<option value ="INF">INF</option> 
+	<option value ="1B/OF">1B/OF</option> 
+	<option value ="OF">OF</option> 
+	<option value ="CF">CF</option> 
+	<option value ="C">C</option>
+</select></td>	
+<td><select name="team">
+	<option value = "{{player.team}}">{{player.team}}</option>
+	<option value ='Giants'>Giants</option>
+	<option value ="Dodgers">Dodgers</option> 
+	<option value ="Diamondbacks">Diamondbacks</option> 
+	<option value ="Padres">Padres</option> 
+	<option value ="Rockies">Rockies</option> 
+	<option value ="Reds">Reds</option> 
+	<option value ="Cardinals">Cardinals</option> 
+	<option value ="Brewers">Brewers</option> 
+	<option value ="Pirates">Pirates</option> 
+	<option value ="Cubs">Cubs</option> 
+	<option value ="Astros">Astros</option> 
+	<option value ="Nationals">Nationals</option> 
+	<option value ="Braves">Braves</option> 
+	<option value ="Phillies">Phillies</option> 
+	<option value ="Mets">Mets</option> 
+	<option value ="Marlins">Marlins</option> 
+	<option value ="Athletics">Athletics</option> 
+	<option value ="Rangers">Rangers</option> 
+	<option value ="Angels">Angels</option> 
+	<option value ="Mariners">Marineres</option> 
+	<option value ="Tigers">Tigers</option> 
+	<option value ="White Sox">White Sox</option> 
+	<option value ="Royals">Royals</option> 
+	<option value ="Indians">Indians</option> 
+	<option value ="Twins">Twins</option> 
+	<option value ="Yankees">Yankees</option> 
+	<option value ="Orioles">Orioles</option> 
+	<option value ="Rays">Rays</option> 
+	<option value ="Blue Jays">Blue Jays</option> 
+	<option value ="Red Sox">Red Sox</option> 
+</select></td>
+<td><input type=hidden name="id" value = "{{player.pID}}"><div title = "sry guys, this needs to stay the same">{{player.pID}}</td>
+</table>
+<!-------------UPDATE O_STATS TABLE------------------------------>
+<font size = "3" face="aharoni" color="003399">Offensive Stats</font>
+<table width="8px" border ="3" cellspacing ="2" cellpadding ="1" bgcolor="#66CCCC">
+	<tr>
+	<td width="100px"><strong> average </td>
+	<td width="50px"><strong> slg </td>
+	<td width="50px"><strong> obs </td>
+	<td width="50px"><strong> ops </td>
+	<td width="50px"><strong> hits </td>
+	<td width="50px"><strong> 2B </td>
+	<td width="50px"><strong> 3B </td>
+	<td width="50px"><strong> HR </td>
+	<td width="50px"><strong> RBI </td>
+	<td width="50px"><strong> SB </td>
+	</tr>	
+		{% if o_stats.average == "" or o_stats.average == null or o_stats.average == "None" %}
+	<tr>
+	<td><input size = 4 type=text name="average" value = "0.00"></td>
+	<td><input size = 4 type=text name="slg" value = "0.00"></td>	
+	<td><input size = 4 type=text name="obs" value = "0.00"></td>
+	<td><input size = 4 type=text name="ops" value = "0.00"></td>
+	<td><input size = 4 type=text name="hits" value = "0"></td>
+	<td><input size = 4 type=text name="twoB" value = "0"></td>
+	<td><input size = 4 type=text name="threeB" value = "0"></td>
+	<td><input size = 4 type=text name="HR" value = "0"></td>
+	<td><input size = 4 type=text name="RBI" value = "0"></td>
+	<td><input size = 4 type=text name="SB" value = "0"></td>
+	<td
+		</tr>
+	{% else %}
+		<tr>
+	<td><input size = 4 type=text name="average" value = "{{o_stats.average}}"></td>
+	<td><input size = 4 type=text name="slg" value = "{{o_stats.slg}}"></td>	
+	<td><input size = 4 type=text name="obs" value = "{{o_stats.obs}}"></td>
+	<td><input size = 4 type=text name="ops" value = "{{o_stats.ops}}"></td>
+	<td><input size = 4 type=text name="hits" value = "{{o_stats.hits}}"></td>
+	<td><input size = 4 type=text name="twoB" value = "{{o_stats.twoB}}"></td>
+	<td><input size = 4 type=text name="threeB" value = "{{o_stats.threeB}}"></td>
+	<td><input size = 4 type=text name="HR" value = "{{o_stats.HR}}"></td>
+	<td><input size = 4 type=text name="RBI" value = "{{o_stats.RBI}}"></td>
+	<td><input size = 4 type=text name="SB" value = "{{o_stats.SB}}"></td>
+	<td
+		</tr>
+	{% endif %}
+</table>
+<!--------------UPDATE P_STATS--------------------------------------------->
+<font size = "3" face="aharoni" color="003399">Pitcher Stats</font>
+<table width="450px" border ="3" cellspacing ="2" cellpadding ="1" bgcolor="#66CCCC">
+	<tr>
+	<td width="100px"><strong> W </td>
+	<td width="50px"><strong> L </td>
+	<td width="50px"><strong> ERA </td>
+	<td width="50px"><strong> WHIP </td>
+	<td width="50px"><strong> K </td>
+	<td width="50px"><strong> BB </td>
+	<td width="50px"><strong> SV </td>
+	</tr>
+	{% if p_stats.W == "" or p_stats.W == null or p_stats.W == "None" %}
+		<tr>
+	<td><input size = 4 type=text name="W" value = "0"></td>
+	<td><input size = 4 type=text name="L" value = "0"></td>
+	<td><input size = 4 type=text name="ERA" value = "0.00"></td>
+	<td><input size = 4 type=text name="WHIP" value = "0.00"></td>
+	<td><input size = 4 type=text name="K" value = "0"></td>
+	<td><input size = 4 type=text name="BB" value = "0"></td>
+	<td><input size = 4 type=text name="SV" value = "0"></td>
+		</tr>
+	{% else %}
+		<tr>
+	<td><input size = 4 type=text name="W" value = "{{p_stats.W}}"></td>
+	<td><input size = 4 type=text name="L" value = "{{p_stats.L}}"></td>
+	<td><input size = 4 type=text name="ERA" value = "{{p_stats.ERA}}"></td>
+	<td><input size = 4 type=text name="WHIP" value = "{{p_stats.WHIP}}"></td>
+	<td><input size = 4 type=text name="K" value = "{{p_stats.K}}"></td>
+	<td><input size = 4 type=text name="BB" value = "{{p_stats.BB}}"></td>
+	<td><input size = 4 type=text name="SV" value = "{{p_stats.SV}}"></td>
+		</tr>
+	{% endif %}
+</table>
+<!---------------D_STATS--------------------------------------------->
+<font size = "3" face="aharoni" color="003399">Defense Stats</font>
+<table width="300px" border ="3" cellspacing ="2" cellpadding ="1" bgcolor="#66CCCC">
+	<tr>
+	<td width="100px"><strong> field percent </td>
+	<td width="50px"><strong> errors </td>
+	</tr>
+	{% if d_stats.errors == "" or d_stats.errors == null or d_stats.errors == "None" %}
+		<tr>
+	<td><input size = 4 type=text name="fld_pct" value = "0.00"></td>
+	<td><input size = 4 type=text name="errors" value = "0"></td>
+		</tr>
+	{% else %}	
+		<tr>
+	<td><input size = 4 type=text name="fld_pct" value = "{{d_stats.fld_pct}}"></td>
+	<td><input size = 4 type=text name="errors" value = "{{d_stats.errors}}"></td>
+		</tr>
+	{% endif %}
+</table>
+
+<br>
+<td><input type=submit name="null" value="update!"></td>
+</tr></form>
+
+</body>
+</html> 

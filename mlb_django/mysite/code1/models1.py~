@@ -1,0 +1,32 @@
+from django.db import models
+# Create your models here.
+
+class pro_player( models.Model ):
+    class Meta:
+        db_table = 'pro_player'
+        
+    pID = models.CharField(max_length=10, primary_key=True)
+    pname = models.CharField(max_length=20)
+    height = models.CharField(max_length=20)
+    weight = models.CharField(max_length=10)
+    birthDay = models.DateTimeField('birth date')
+    debutDate = models.DateTimeField('debut date')
+    pposition = models.CharField(max_length=10)
+    team = models.ForeignKey('pro_team',blank=True,null=True)
+    
+    def __unicode__(self):
+        return self.pname
+        
+class pro_team ( models.Model ):
+    class Meta:
+        db_table = 'pro_team'
+        
+    tname = models.CharField(max_length=20, primary_key=True)
+    league = models.CharField(max_length=2)
+    city = models.CharField(max_length=20)
+    record = models.CharField(max_length=10)
+    sAddress = models.CharField(max_length=50)
+        
+    def __unicode__(self):
+        return self.tname
+		

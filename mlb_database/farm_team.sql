@@ -1,0 +1,14 @@
+USE majorLeagueBaseball;
+
+LOCK TABLES farm_team WRITE;
+
+SET foreign_key_checks = 0;
+
+INSERT INTO farm_team VALUES
+('Grizzlies', 'AAA', 'Fresno, CA', '0-0', '1800 Tulare Street Fresno, CA', 'Giants'),
+('River Cats', 'AAA', 'Sacramento, CA', '0-0', '400 Ballpark Drive West Sacramento, CA', 'Athletics'),
+('51s', 'AAA', 'Las Vegas, NV', '0-0', '850 Las Vegas Blvd North Las Vegas, NV', 'Mets');
+
+SET foreign_key_checks = 1;
+
+UNLOCK TABLES;

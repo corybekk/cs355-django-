@@ -1,0 +1,65 @@
+USE majorLeagueBaseball;
+
+LOCK TABLES free_agent WRITE;
+
+SET foreign_key_checks = 0;
+
+INSERT INTO free_agent VALUES
+('Kyle Lohse', 'Cardinals', 'RHP', 172),
+('Bobby Abreu', 'Dodgers', 'OF',  173),
+('Jason Bartlett', 'Padres', 'SS', 174),
+('Sean Burroughs', 'Twins', '3B', 175),
+('Vinnie Chulk', 'Brewers', 'RHP', 176),
+('Todd Coffey', 'Dodgers', 'RHP', 177),
+('Franciso Cordero', 'Astros', 'RHP', 178),
+('Juan Cruz', 'Pirates', 'RHP', 179),
+('Johnny Damon', 'Indians', 'OF', 180),
+('Tim Dillard', 'Brewers', 'RHP', 181),
+('Jack Egbert', 'Mets',  'RHP', 182),
+('Willie Eyre', 'Rangers', 'RHP', 183),
+('Gary Glover', 'Marlins', 'RHP', 184),
+('Tyler Graham', 'Diamond Backs', 'OF', 185),
+('Willie Harris', 'Reds', 'OF', 186),
+('Livan Hernandez', 'Brewers', 'RHP', 187),
+('Koyie Hill', 'Rangers', 'C', 188),
+('Orlando Hudson', 'White Sox', '2B', 189),
+('Aubrey Huff', 'Giants', '1B/OF',190),
+('Luke Hughes', 'Blue Jays', '3B', 191),
+('Adam Kennedy', 'Dodgers', '2B', 192),
+('Carlos Lee', 'Marlins', 'OF/1B',193),
+('Fred Lewis', 'Mets', 'OF', 194),
+('Derek Lowe', 'Yankees', 'RHP', 195),
+('Hector Luna', 'Pirates', '2B', 196),
+('Mike MacDougal', 'Nationals', 'RHP', 197),
+('Dustin Moseley', 'Padres', 'RHP', 198),
+('Guillermo Mota', 'Giants', 'RHP', 199),
+('Jamie Moyer', 'Blue Jays', 'RHP', 200),
+('Roy Oswalt', 'Rangers', 'RHP', 201),
+('David Pauley', 'Mariners', 'RHP', 202),
+('Carl Pavano', 'Twins', 'RHP', 203),
+('Brad Penny', 'Giants', 'RHP', 204), 
+('Scott Podsednik', 'Red Sox', 'OF', 205),
+('Horacio Ramirez', 'Cubs', 'LHP', 206),
+('Jason Repko', 'Red Sox', 'OF', 207),
+('Scott Richmond', 'Blue Jays', 'RHP', 208),
+('Francisco Rodriguez', 'Brewers', 'RHP', 209),
+('Scott Rolen', 'Reds', '3B', 210),
+('J.C Romero', 'Orioles', 'LHP', 211),
+('Freddy Sanchez', 'Giants', '2B', 212),
+('Grady Sizemore', 'Indians', 'OF', 213),
+('Doug Slaten', 'Pirates', 'LHP', 214),
+('Jeff Suppan', 'Padres', 'RHP', 215),
+('Ryan Theriot', 'Giants', '2B', 216),
+('Jim Thome','Orioles', '1B', 217),
+('Matt Treanor', 'Brewers', 'C', 218),
+('Jose Valverde', 'Tigers', 'RHP', 219),
+('Chien-Ming Wang', 'Nationals', 'RHP', 220),
+('Kip Wells', 'Padres', 'RHP', 221),
+('Brian Wilson', 'Giants', 'RHP', 222),
+('Randy Wolf', 'Orioles', 'LHP', 223),
+('Carlos Zambrano', 'Marlins', 'RHP', 224);
+
+
+SET foreign_key_checks = 1;
+
+UNLOCK TABLES;

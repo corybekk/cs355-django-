@@ -1,0 +1,13 @@
+from code1.models import pro_player, pro_team
+from django.contrib import admin
+
+class pro_player_admin(admin.ModelAdmin):
+	list_display=['pname','height','weight','birthDay','debuteDate','pposition','team_id_id']
+	
+admin.site.register(pro_player, pro_player_admin)
+	
+	
+class pro_team_admin(admin.ModelAdmin):
+	list_display=['tname','city','record','sAddress']
+
+admin.site.register(pro_team, pro_team_admin)
